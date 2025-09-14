@@ -1,0 +1,129 @@
+body {
+    background: #000;
+    margin: 0;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Bordas azuis escuras nas pontas da tela */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 24px;
+    height: 100vh;
+    top: 0;
+    background: #0a2240; /* azul escuro */
+    z-index: 1;
+}
+
+body::before {
+    left: 0;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+body::after {
+    right: 0;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+/* Container centralizado com fundo branco */
+.centralizado {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px 24px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 24px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 2;
+}
+
+.centralizado h1 {
+    font-family: 'OCR A Std', monospace;
+    margin-top: 0;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.centralizado form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Garante que o botão fique logo abaixo do título */
+.centralizado h1 + form > div:first-child,
+.centralizado h1 + button,
+.centralizado h1 + form > button {
+    margin-top: 24px;
+}
+
+/* Centraliza o botão logo abaixo do título */
+.centralizado > button {
+    display: block;
+    margin: 24px auto 0 auto;
+    font-family: 'OCR A Std', monospace;
+    font-size: 1.1rem;
+    background: #0a2240;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 32px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(10,34,64,0.08);
+}
+
+.centralizado > button:hover {
+    background: #143366;
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* Se houver vários botões, aplica o estilo a todos */
+.centralizado button {
+    font-family: 'OCR A Std', monospace;
+    font-size: 1.1rem;
+    background: #0a2240;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 32px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(10,34,64,0.08);
+    margin-top: 18px;
+}
+
+.centralizado button:hover {
+    background: #143366;
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* COLOQUE AS CLASSES PERSONALIZADAS AQUI NO FINAL */
+.btn-incrivel {
+    background: #c0392b !important;
+}
+.btn-gelado {
+    background: #2980b9 !important;
+}
+.btn-olho {
+    background: #020fca !important;
+}
+.btn-joia {
+    background: #f1c40f !important;
+    color: #222 !important;
+}
+ 
