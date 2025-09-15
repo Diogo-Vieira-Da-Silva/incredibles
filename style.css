@@ -112,6 +112,15 @@ body::after {
     transform: translateY(-2px) scale(1.03);
 }
 
+/* Container para botão e áudio lado a lado */
+.audio-button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 24px;
+}
+
 /* COLOQUE AS CLASSES PERSONALIZADAS AQUI NO FINAL */
 .btn-incrivel {
     background: #c0392b !important;
